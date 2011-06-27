@@ -9,9 +9,9 @@ class PostsController < ApplicationController
       @posts = Post.all
       
     else
-      #@posts = Post.search do
-       # fulltext @search
-      #end
+      @posts = Post.search do
+        fulltext @search
+      end
     end
     
 
