@@ -2,7 +2,18 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all
+    @search = params[:search]
+    
+    if @search.blank?
+    
+      @posts = Post.all
+      
+    else
+      #@posts = Post.search do
+       # fulltext @search
+      #end
+    end
+    
 
     respond_to do |format|
       format.html # index.html.erb
