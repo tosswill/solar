@@ -14,7 +14,7 @@
     <th></th>
   </tr>
 
-<% @posts..each_hit_with_result do |hit, post|  %>
+<% @posts.each_hit_with_result do |hit, post|  %>
   <tr>
     <td><%= post.title %></td>
     <td><%= post.body %></td>
